@@ -23,8 +23,8 @@ export const loginController = async (req, res) => {
     }
 
     const token = jwt.sign({ userId: user._id, email: user.email }, secretKey, { expiresIn: '1h' });
-
     res.status(200).json({ message: 'Login successful', token });
+     
     console.log("token in login" +token)
   } catch (error) {
     console.error(error);
