@@ -30,6 +30,14 @@ export const login = async (logdata) => {
     throw error;
   }
 };
+export const newProduct = async (setAdd) =>{
+  try{
+    const response = await api.post("/addproduct",setAdd);
+    return response.data;
+  }catch(error){
+    throw error;
+  }
+}
 
 
 

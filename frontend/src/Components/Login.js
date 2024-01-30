@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../Services/api'
 
 export default function Login() {
@@ -7,6 +7,7 @@ export default function Login() {
         email:"",
         password:""
 })
+const navigate =useNavigate();
     const handleChange =(e)=>{
         setLogdata({...logdata,[e.target.name]:e.target.value})
     }
@@ -14,7 +15,8 @@ export default function Login() {
         event.preventDefault();
         try {
           await login(logdata);
-          alert('Login successful'); 
+        //   alert('Login successfull'); 
+          navigate('/Products');
         } catch (error) {
           console.error(error);
           alert('Login failed. Please check your credentials.');
