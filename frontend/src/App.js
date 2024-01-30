@@ -4,22 +4,24 @@ import Login from "./Components/Login";
 import Signp from "./Components/Signp";
 import Landing from "./Components/Landing"; // Import the Landing component
 import Products from './Components/Products';
-import AddProducts from './Components/AddProducts';
+import UserAdd from './Components/UserAdd';
+
+
 
 function App() {
   return (
     <>
   
-  <AddProducts/>
-      {/* <Router>
+
+      <Router>
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signp' element={<Signp />} />
-          <Route path='/Landing' element={<Landing />} /> 
           <Route path='/Products' element={<Products />} /> 
+          <Route path='/UserAdd' element={<UserAdd />} /> 
         </Routes>
-      </Router> */}
+      </Router>
     </>
   );
 }

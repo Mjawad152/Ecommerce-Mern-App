@@ -30,16 +30,22 @@ export const login = async (logdata) => {
     throw error;
   }
 };
-export const newProduct = async (setAdd) =>{
-  try{
-    const response = await api.post("/addproduct",setAdd);
+export const userdata = async (proData) => {
+  try {
+    const response = await api.post('/user-data', proData);
     return response.data;
-  }catch(error){
+  } catch (error) {
     throw error;
   }
-}
-
-
+};
+export const getData = async () => {
+  try {
+    const response = await api.get('/user-items');
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
 
 

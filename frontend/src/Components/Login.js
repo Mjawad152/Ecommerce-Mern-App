@@ -30,7 +30,7 @@ const navigate =useNavigate();
             <h3 className='text-center'>Log In</h3>
             <div className='mb-2'>
                 <label htmlFor="email">Email</label>
-                <input type="email" name="email" id=""  className='form-control' onChange={handleChange}/>
+                <input type="email" name="email" id=""  className='form-control' onChange={handleChange} />
             </div>
             <div className='mb-2'>
                 <label htmlFor="password">Password</label>
